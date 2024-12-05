@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myweb.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="input-container">
+            <input type="text" id="username" placeholder="Введіть ваше ім'я">
+            <button onclick="startGame()">Почати гру</button>
+        </div>
+        <div id="gameArea" style="display: none;">
+            <div class="players-container">
+                <div class="player">
+                    <div class="score-box" id="usernameDisplay"></div>
+                    <div class="score-box" id="userScore">0</div>
+                    <div id="image-containerUser">
+                        <img src="default.jpg" alt="Початк. зобр." width="200" height="300">
+                    </div>
+                </div>
+                <div class="player">
+                    <div class="score-box">Комп'ютер</div>
+                    <div class="score-box" id="computerScore">0</div>
+                    <div id="image-containerComputer">
+                        <img src="default.jpg" alt="Початк. зобр." width="200" height="300">
+                    </div>
+                </div>
+            </div>
+            <button class="generate-btn" onclick="playRound()">Генерувати</button>
+            <div id="result"></div>
+        </div>
+    </div>
+
+</body>
+</html>
